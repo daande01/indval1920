@@ -2,7 +2,7 @@ package prog1indval_1920;
 
 import javax.swing.JOptionPane;
 
-public class Tset {
+public class Test {
 
 
 
