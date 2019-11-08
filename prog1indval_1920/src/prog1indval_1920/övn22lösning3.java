@@ -13,6 +13,8 @@ public class övn22lösning3 {
 
 		double svar =  Math.pow(d, 2);
 
+		System.out.println(svar);
+
 		JOptionPane.showMessageDialog(null,svar);
 
 
