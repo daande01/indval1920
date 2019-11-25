@@ -12,12 +12,26 @@ public class upp45 {
 
 		System.out.println("mata in täljare och nämnare :");
 
-		String s =sc.next();
+		String s =sc.nextLine();
 
-		System.out.println(s.lastIndexOf(' '));
-		int täljare= Integer.parseInt(  s.substring(0,s.lastIndexOf(' '))   );
+		String t=s.substring(0,s.lastIndexOf(' '));
+		String n=s.substring(s.lastIndexOf(' ')+1);
+
+		int täljare= Integer.parseInt( t );
+
+		int nämnare=Integer.parseInt(n);
 
 		System.out.println(täljare);
+		System.out.println(nämnare);
+
+		int hela =  täljare/nämnare;
+
+		int rest =  täljare%nämnare;
+
+
+		System.out.println(hela+" "+rest+"/"+nämnare );
+		System.out.println(rest);
+
 	}
 
 
