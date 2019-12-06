@@ -14,8 +14,6 @@ public class Area {
 
 		int b=Integer.parseInt(bas);
 
-
-
 		int triarea= h*b/2;
 
 		int kvadarea=h*b;

@@ -5,7 +5,25 @@ import java.util.Scanner;
 public class upp45 {
 
 
+
+
+
+
+
 	public static void main(String[] args) {
+
+		/*skapa scanner objekt
+		 * skriv ut fråga
+		 * läsa in svar
+		 * plocka ut täljare
+		 * plocka ut nämnare
+		 *
+		 *
+		 *
+		 *
+		 */
+
+
 
 		Scanner sc = new Scanner(System.in);
 
