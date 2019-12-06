@@ -16,10 +16,10 @@ public class Ovn71 {
 
 		int age = Integer.parseInt(sage);
 
-		if (age >= 12 && age<100) {
+		if (age >= 12 && age < 100) {
 			System.out.println("ok");
 
-		} else  if (age < 12 && age>=0) {
+		} else if (age < 12 && age >= 0) {
 
 			System.out.println("inte ok");
 		}

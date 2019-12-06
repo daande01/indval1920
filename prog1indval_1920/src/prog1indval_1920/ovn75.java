@@ -7,9 +7,9 @@ public class ovn75 {
 	public static void main(String[] args) {
 
 
-		String slängd=JOptionPane.showInputDialog("ange längd:");
+		String slängd = JOptionPane.showInputDialog("ange längd:");
 
-		double längdtal=Double.parseDouble(slängd);
+		double längdtal = Double.parseDouble(slängd);
 
 		String svind=JOptionPane.showInputDialog("ange vind:");
 
