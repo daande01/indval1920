@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 public class metoder3 {
 
+
+
 	// Skapa en metod som du kan använda för att kryptera en text genom byta ut alla tecken mot deras värde i teckentabellen unicode.
 
 	public static void main(String[] args) {
