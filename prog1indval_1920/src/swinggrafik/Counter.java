@@ -6,13 +6,14 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Litenerlambda extends JFrame {
+public class Counter extends JFrame {
+	private int i = 0;
+	private JButton b1=new JButton("+");
+	private JButton b2=new JButton("-");
+	private JLabel  l1= new JLabel(""+i);
 
-	private JButton b1=new JButton("send");
-	private JButton b2=new JButton("send");
-	private JLabel  l1= new JLabel("");
 
-	public Litenerlambda() {
+	public Counter() {
 
 		setLayout(new FlowLayout());
 		setVisible(true);
@@ -21,12 +22,13 @@ public class Litenerlambda extends JFrame {
 		add(b1);
 		add(b2);
 		b1.addActionListener(e->{
-			System.out.println("knapp1");
-			l1.setText("test");
+
+			i++;
+			l1.setText(""+i);
 		});
 		b2.addActionListener(e->{
-
-			l1.setText("");
+			i--;
+			l1.setText(""+i);
 
 		});
 
@@ -37,7 +39,7 @@ public class Litenerlambda extends JFrame {
 
 	public static void main(String[] args) {
 
-		new Litenerlambda();
+		new Counter();
 
 
 
