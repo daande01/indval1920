@@ -15,6 +15,7 @@ public class Counter extends JFrame {
 
 	public Counter() {
 
+
 		setLayout(new FlowLayout());
 		setVisible(true);
 		setSize(400,400);
