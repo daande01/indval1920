@@ -3,12 +3,14 @@ package egengrafik;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.Timer;
 
-public class Smiley extends JComponent {
+public class Smileykey extends JComponent implements KeyListener {
 
 	int x = 100;
 	int y = 100;
@@ -17,7 +19,10 @@ public class Smiley extends JComponent {
 
 	static Timer t;
 
-	public Smiley() {
+	public Smileykey() {
+
+
+		this.addKeyListener(this);
 
 		this.setPreferredSize(new Dimension(400, 400));
 
@@ -88,9 +93,39 @@ public class Smiley extends JComponent {
 		JFrame f = new JFrame();
 		f.setVisible(true);
 
-		f.setContentPane(new Smiley());
+		f.setContentPane(new Smileykey());
 		f.pack();
+		//f.setFocusable(true);
+		f.setFocusTraversalKeysEnabled(true);
 
 	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+
+		if(e.getKeyCode()==KeyEvent.VK_UP) {
+
+			System.out.print("fungerar sådär");
+
+
+		}
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+
+
+	}
+	@Override
+	public boolean isFocusTraversable() {
+		return true;
+	}
+
 
 }
