@@ -21,12 +21,11 @@ public class Smileykey extends JComponent implements KeyListener {
 
 	public Smileykey() {
 
-
 		this.addKeyListener(this);
 
 		this.setPreferredSize(new Dimension(400, 400));
 
-		t = new Timer(10, e -> {
+		t = new Timer(60, e -> {
 
 			update();
 
@@ -40,8 +39,8 @@ public class Smileykey extends JComponent implements KeyListener {
 
 		// yv=yv+1;
 
-		x += xv; /// -20 -19 -18 -1 0 1
-		y = y + yv;
+		// x += xv; /// -20 -19 -18 -1 0 1
+		// y = y + yv;
 		repaint();
 
 		if (y >= 400 - 100) {
@@ -56,22 +55,18 @@ public class Smileykey extends JComponent implements KeyListener {
 			xv = xv * -1;
 
 		}
-		if(y<=0) {
+		if (y <= 0) {
 
-			y=0;
+			y = 0;
 
-			yv=yv*-1;
+			yv = yv * -1;
 		}
 		if (x <= 0) {
-			x =0;
+			x = 0;
 
 			xv = xv * -1;
 
 		}
-
-
-
-
 
 	}
 
@@ -95,7 +90,7 @@ public class Smileykey extends JComponent implements KeyListener {
 
 		f.setContentPane(new Smileykey());
 		f.pack();
-		//f.setFocusable(true);
+		// f.setFocusable(true);
 		f.setFocusTraversalKeysEnabled(true);
 
 	}
@@ -103,10 +98,24 @@ public class Smileykey extends JComponent implements KeyListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
 
-		if(e.getKeyCode()==KeyEvent.VK_UP) {
+		if (e.getKeyCode() == KeyEvent.VK_UP) {
 
-			System.out.print("fungerar sådär");
+			y = y - 10;
 
+		}
+		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+
+			y = y + 10;
+
+		}
+		if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+
+			x = x + 10;
+
+		}
+		if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+
+			x = x - 10;
 
 		}
 	}
@@ -120,12 +129,11 @@ public class Smileykey extends JComponent implements KeyListener {
 	@Override
 	public void keyTyped(KeyEvent e) {
 
-
 	}
+
 	@Override
 	public boolean isFocusTraversable() {
 		return true;
 	}
-
 
 }
