@@ -80,6 +80,7 @@ public class Smileykey extends JComponent implements KeyListener {
 		g.fillOval(x + 30, y + 30, 10, 10);
 		g.fillOval(x + 60, y + 30, 10, 10);
 		g.drawLine(x + 30, y + 70, x + 70, y + 70);
+		g.drawLine(250, 0, 250, 400);
 
 	}
 
@@ -93,6 +94,7 @@ public class Smileykey extends JComponent implements KeyListener {
 		// f.setFocusable(true);
 		f.setFocusTraversalKeysEnabled(true);
 
+
 	}
 
 	@Override
@@ -102,6 +104,15 @@ public class Smileykey extends JComponent implements KeyListener {
 
 			y = y - 10;
 
+
+
+
+
+
+
+
+
+
 		}
 		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
 
@@ -110,8 +121,16 @@ public class Smileykey extends JComponent implements KeyListener {
 		}
 		if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
 
-			x = x + 10;
+			x = x + 1;
 
+			for (int i = 0; i < 360; i++) {
+			System.out.println((50)*Math.cos(Math.toRadians(i))+x+50);
+
+				if( ( (50)*Math.cos(Math.toRadians(i))+x+50 ) >250) {
+
+					System.out.print("träff");
+				}
+			}
 		}
 		if (e.getKeyCode() == KeyEvent.VK_LEFT) {
 
