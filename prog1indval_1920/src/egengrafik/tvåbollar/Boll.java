@@ -12,7 +12,7 @@ public class Boll {
 	private Color färg ;
 	private int radie;
 
-	public Boll(double xx, double yy, double xvv, double yvv, Color f , int r) {
+	public Boll(double xx, double yy, double xvv, double yvv, Color f, int r) {
 
 		this.x=xx;
 		this.y=yy;
