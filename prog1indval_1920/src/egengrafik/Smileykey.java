@@ -103,16 +103,6 @@ public class Smileykey extends JComponent implements KeyListener {
 		if (e.getKeyCode() == KeyEvent.VK_UP) {
 
 			y = y - 10;
-
-
-
-
-
-
-
-
-
-
 		}
 		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
 
